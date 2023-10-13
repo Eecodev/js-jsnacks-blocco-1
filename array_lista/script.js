@@ -27,10 +27,33 @@ const fridgeList = [
     'fragola'
 ]
 
+
 const tableList = 'pesca';
 
 // mettiamo la pesca nella lista frigo
 fridgeList.push('pesca');
+console.log(fridgeList);
 
+let msg;
+const btn = document.querySelector('button');
+const inputEl = document.getElementById('data');
+const resultEl = document.querySelector('.alert');
 
-
+// controllo se ho il cocomero in frigo
+btn.addEventListener('click', function(){
+    let alertColor = 'alert-success';
+    resultEl.classList.remove(alertColor);
+    resultEl.classList.add('d-none');
+    let flag = false;
+    for (i = 0; i < fridgeList.length; i++){
+        if (fridgeList[i] === 'cocomero'){
+            flag = true;
+        } 
+        if (flag === true){
+            console.log('trovato');
+        } 
+    }
+    resultEl.classList.add(alertColor);
+    resultEl.classList.remove('d-none');
+    resultEl.innerText = msg;
+})
