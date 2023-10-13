@@ -32,7 +32,7 @@ const tableList = 'pesca';
 
 // mettiamo la pesca nella lista frigo
 fridgeList.push('pesca');
-console.log(fridgeList);
+// console.log(fridgeList);
 
 let msg;
 const btn = document.querySelector('button');
@@ -44,9 +44,10 @@ btn.addEventListener('click', function(){
     let alertColor = 'alert-success';
     resultEl.classList.remove(alertColor);
     resultEl.classList.add('d-none');
+    // let fridgeList = parseInt(inputEl.value);
     let flag = false;
     for (i = 0; i < fridgeList.length; i++){
-        if (fridgeList[i] === 'cocomero'){
+        if (fridgeList[i] === inputEl.value){
             flag = true;
         } 
     }
