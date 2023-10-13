@@ -29,9 +29,8 @@ const fridgeList = [
 
 const tableList = 'pesca';
 
-
-// mettiamo la pesca in frigo
-
+// mettiamo la pesca nella lista frigo
+fridgeList.push('pesca');
 
 
 
