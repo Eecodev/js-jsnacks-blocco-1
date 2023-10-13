@@ -49,11 +49,15 @@ btn.addEventListener('click', function(){
         if (fridgeList[i] === 'cocomero'){
             flag = true;
         } 
-        if (flag === true){
-            console.log('trovato');
-        } 
+    }
+
+    if (flag === true){
+        msg = 'trovato';
+    } else{
+        msg = 'non trovato';
     }
     resultEl.classList.add(alertColor);
     resultEl.classList.remove('d-none');
     resultEl.innerText = msg;
 })
+
